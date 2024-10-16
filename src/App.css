@@ -1,0 +1,27 @@
+body{
+  background-color: black;
+  color: white;
+}
+.inputBox{
+  width: 600px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input{
+  width: 70px !important;
+ 
+  
+  transform-origin: center !important;
+}
+
+.input:hover{
+  transition: 0.5s;
+  width: 300px !important;
+}
+
+
+    body {
+        background-color: #e09129 !important;
+    }
