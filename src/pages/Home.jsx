@@ -25,7 +25,7 @@ const Home = (props) => {
     <div className='grid grid-cols-12 gap-3 p-3'>
      {
               arr.map((ele,i) => {
-                return <div key={ele.id} className="lg:col-span-3 m-auto md:col-span-4 sm:col-span-6 col-span-12 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-orange-900 dark:border-gray-700">
+                return <div key={ele.id} className="lg:col-span-3 m-auto md:col-span-4 sm:col-span-6 col-span-12 max-w-sm bg-white   rounded-lg shadow shadow-lg bg-gradient-to-r from-stone-500 to-stone-700 ">
   <a href="#">
     <img className="p-2 rounded-t-lg" src={ele.thumbnail} alt="product image" />
   </a>
