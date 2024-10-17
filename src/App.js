@@ -22,7 +22,9 @@ function App() {
   return (
     <div className="App">
         <BrowserRouter>
-          <Navbar/>
+         <div className = 'mb-[75px]'>
+         <Navbar cartArr ={cartArr}/>
+         </div>
           <Routes>
               <Route path='/' element = {<Home getItem = {getItem}/>} />
               <Route path='/register' element = {<Signup/>} />

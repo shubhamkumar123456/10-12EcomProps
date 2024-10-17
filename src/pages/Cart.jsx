@@ -11,6 +11,27 @@ const Cart = (props) => {
     props.setcartArr(copyArr)
   }
 
+  const handleIncrement = (ans,i)=>{
+      console.log(ans)
+      let updatedObj = {
+        ...ans,
+        price:ans.price+(ans.price/ans.quantity),
+        quantity:ans.quantity+1
+
+        // price:
+      }
+      console.log(updatedObj)
+      let copyArr = [...props.cartArr]
+      copyArr[i] = updatedObj
+      props.setcartArr(copyArr)
+
+
+      // let copyArr = [...props.cartArr];
+
+
+      console.log(i)
+  }
+
   return (
     <div>
       
@@ -51,10 +72,10 @@ const Cart = (props) => {
             {obj.title}
           </td>
           <td className="px-6 py-4">
-            {obj.price}
+            {obj.price.toFixed(2)}
           </td>
           <td className="px-6 py-4">
-           <button className='bg-green-300 p-1 text-lg text-black' type='button'>+</button> {obj.quantity} <button className='bg-green-300 p-1 text-black text-lg'>-</button>
+           <button onClick={()=>handleIncrement(obj,i)} className='bg-green-300 p-1 text-lg text-black' type='button'>+</button> {obj.quantity} <button className='bg-green-300 p-1 text-black text-lg'>-</button>
           </td>
           <td className="px-6 py-4 text-right">
             <button type='button' onClick={()=>handleDelete(obj,i)}  className="font-medium text-white rounded-md bg-red-500 p-2">Delete</button>

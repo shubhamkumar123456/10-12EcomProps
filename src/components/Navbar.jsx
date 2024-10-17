@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-  const Navbar=()=>{
+  const Navbar=(props)=>{
 
 
    
@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom'
     return (
        
         
-       <header className="bg-white bg-opacity-5 text-white shadow-lg hidden md:block">
-  <div className="container mx-auto flex items-center h-24">
+       <header className="  fixed top-0 left-0 bg-[#e09129] right-0 text-white shadow-lg hidden md:block">
+  <div className="container mx-auto flex items-center h-20">
     <Link to='/' className="flex items-center justify-center">
       <img className="h-16" src="https://i.ibb.co/6Yxs70d/2021-10-26-23h27-03.png" alt />
       <span className="ml-4 uppercase font-black">ShopClues</span>
@@ -18,9 +18,9 @@ import { Link } from 'react-router-dom'
     <nav className="contents font-semibold text-base lg:text-lg">
       <ul className="mx-auto flex items-center">
         <li className="p-5 xl:p-8 active">
-          <a href>
+          <Link to="/">
             <span>Home</span>
-          </a>
+          </Link>
         </li>
         <li className="p-5 xl:p-8">
           <a href>
@@ -38,9 +38,9 @@ import { Link } from 'react-router-dom'
           </a>
         </li>
         <li className="p-5 xl:p-8">
-          <a href>
-            <span>Blog</span>
-          </a>
+          <Link to="/cart">
+            <span>Cart <sup>{props.cartArr.length}</sup></span>
+          </Link>
         </li>
       </ul>
     </nav>
